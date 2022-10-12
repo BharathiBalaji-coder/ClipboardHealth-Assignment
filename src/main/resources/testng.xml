@@ -7,7 +7,7 @@
         <classes>
             <class name="tests.LoginPageTest"></class>
             <class name="tests.HomePageTest"></class>
-
+            <class name="tests.ResultsPageTest"></class>
         </classes>
     </test>
 </suite>
