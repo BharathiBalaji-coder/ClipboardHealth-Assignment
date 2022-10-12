@@ -6,7 +6,7 @@
     <test name="Amazon App Test Cases">
         <classes>
             <class name="tests.LoginPageTest"></class>
-
+            <class name="tests.HomePageTest"></class>
 
         </classes>
     </test>
