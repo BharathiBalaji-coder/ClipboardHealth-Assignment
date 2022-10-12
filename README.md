@@ -25,3 +25,6 @@ Example : C:\Users\bharathibalaji.r\Desktop\allure-commandline-2.9.0\allure-2.9.
 Website to download allure: https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/
 
 1.Click on target/Results Directory and open the terminal 2.Enter the command allure serve 3.HTML Report will be generated.
+
+Allure report:
+![image](https://user-images.githubusercontent.com/76836867/195310451-11ffadbc-db1f-460f-8f25-3f2a5d2c5a76.png)
