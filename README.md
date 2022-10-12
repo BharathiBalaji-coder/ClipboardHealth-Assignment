@@ -4,7 +4,7 @@ Automation Framework Used: TestNG
 Build Tool :Apache Maven
 Test Design Pattern: Page Object Model
 TestNG Annotations Implementation: @Before Method, @Test, @After Method
-Test Automation Reports: Allure Reports
+Test Automation Reports: Allure Reports and Extent Reports
 
 Steps to run the Tests
 1. mvn clean->validate->compile
