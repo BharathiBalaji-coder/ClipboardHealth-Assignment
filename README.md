@@ -13,7 +13,7 @@ WebDriverManager - Executables management
 Lombok - To reduce boilerplate codes
 Build Tool used:Apache Maven
 Test Design Pattern: Page Object Model
-Note : All the above mentioned libraries are open-source and does not include any license.
+Note : All the above-mentioned libraries are open-source and does not include any license.
 
 
 **Running Tests**
@@ -37,7 +37,7 @@ Download allure from maven central and configure the path of allure in Environme
 
 1.Click on target/Results Directory and open the terminal 2.Enter the command allure serve 3.HTML Report will be generated.
 
-**Allure Report Interpretation **:
+**Allure Report Interpretation**:
 
 Dashboard view clearly indicates the start time, end time of the run, number of tests passed and failed. It also shows the time took for the individual tests in form of timeline. Hover the mouse over the timeline to get the exact time details.
 
