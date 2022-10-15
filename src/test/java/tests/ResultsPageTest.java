@@ -25,7 +25,7 @@ public class ResultsPageTest extends TestBase {
 
     LoginPage loginPage;
     HomePage homePage;
-    ResultsPage resultsPage;
+    
 
 
     public ResultsPageTest() {
@@ -63,10 +63,12 @@ public class ResultsPageTest extends TestBase {
         List<String> prices = new ArrayList<>();
         for (WebElement e : price) {
             prices.add(e.getText());
-            System.out.println(e.getText());
+            System.out.println("samsung TV price results:" + e.getText());
         }
         Collections.sort(prices, Collections.reverseOrder());
-        System.out.println("List after the use of" + " Collection.sort() :\n" + prices);
+        for (String tvPrice : prices) {
+            System.out.println("Sort the Samsung results with price High to Low:" + tvPrice);
+        }
         System.out.println("Second highest price item :\n" + prices.get(1));
         Thread.sleep(4000);
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
