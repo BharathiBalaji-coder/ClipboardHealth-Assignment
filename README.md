@@ -37,6 +37,8 @@ Download allure from maven central and configure the path of allure in Environme
 
 1.Click on target/Results Directory and open the terminal 2.Enter the command allure serve 3.HTML Report will be generated.
 
-**Allure Report Interpretation :
-Dashboard view clearly indicates the start time, end time of the run, number of tests passed and failed. It also shows the time took for the individual tests in form of timeline. Hover the mouse over the timeline to get the exact time details.t**:
+**Allure Report Interpretation **:
+
+Dashboard view clearly indicates the start time, end time of the run, number of tests passed and failed. It also shows the time took for the individual tests in form of timeline. Hover the mouse over the timeline to get the exact time details.
+
 ![image](https://user-images.githubusercontent.com/76836867/195310451-11ffadbc-db1f-460f-8f25-3f2a5d2c5a76.png)
