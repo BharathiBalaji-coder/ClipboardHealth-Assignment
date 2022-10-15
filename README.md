@@ -1,12 +1,22 @@
-# ClipboardHealth-Assignment
+# ClipboardHealth Coding Challenge
 
-**Automation Framework Used:** TestNG
-**Build Tool used** :Apache Maven
-**Test Design Pattern**: Page Object Model
-**TestNG Annotations Implementation**: @Before Method, @Test, @After Method
-**Test Automation Reports**: Allure Reports and Extent Reports
+Amazon-Assignment
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**Steps to run the Tests**
+**Libraries Used**: 
+
+Selenium - Web Automation
+TestNG - Unit Testing Library
+Extent Reports - Reporting Library to generate beautiful html reports
+AssertJ - Fluent Assertion Library in Java
+WebDriverManager - Executables management
+Lombok - To reduce boilerplate codes
+Build Tool used:Apache Maven
+Test Design Pattern: Page Object Model
+Note : All the above mentioned libraries are open-source and does not include any license.
+
+
+**Running Tests**
 1. mvn clean->validate->compile
 
 **Allure Reports**:
