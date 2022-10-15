@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends TestBase {
     //Page Factory - OR:
-
-
     @FindBy(id = "ap_email")
     WebElement emailid;
 
@@ -25,8 +23,6 @@ public class LoginPage extends TestBase {
 
     @FindBy(xpath = "//span[normalize-space()='Account & Lists']")
     WebElement accountsAndListsMenu;
-
-
     @FindBy(xpath = "//div[@id='nav-flyout-ya-signin']//span[@class='nav-action-inner'][normalize-space()='Sign in']")
     WebElement signInBtn;
 

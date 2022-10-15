@@ -42,7 +42,7 @@ public class HomePage extends TestBase {
         js.executeScript("window.scrollBy(0,250)", "");
         Thread.sleep(5000);
         TVApplicancesMenu.click();
-        Thread.sleep(5000);
+        Thread.sleep(7000);
     }
 
     public void selectTelevisionsMenu() {
@@ -52,7 +52,7 @@ public class HomePage extends TestBase {
     public void filterSamsungBrand() throws InterruptedException {
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
         js1.executeScript("window.scrollBy(0,250)", "");
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         boolean value = Brands.isDisplayed();
         System.out.println(value);
     }
