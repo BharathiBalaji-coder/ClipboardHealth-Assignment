@@ -46,12 +46,13 @@ public class ResultsPage extends TestBase {
         List<WebElement> price = driver.findElements(By.xpath("//span[@class='a-price']"));
         int size = price.size();
         System.out.println("Size of list = " + size);
-        List<String> prices = new ArrayList<>();
+
+        ArrayList<String> prices = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             prices.add((price.get(i).getText()));
             System.out.println("samsung TV price results:" + price.get(i).getText());
-        }
 
+        }
         Collections.sort(prices, Collections.reverseOrder());
         for (String tvPrice : prices) {
             System.out.println("Sort the Samsung results with price High to Low:" + tvPrice);
