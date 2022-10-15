@@ -47,9 +47,9 @@ public class ResultsPage extends TestBase {
         int size = price.size();
         System.out.println("Size of list = " + size);
         List<String> prices = new ArrayList<>();
-        for (WebElement priceValue : price) {
-            prices.add(priceValue.getText());
-            System.out.println("samsung TV price results:" + priceValue.getText());
+        for (int i = 0; i < size; i++) {
+            prices.add((price.get(i).getText()));
+            System.out.println("samsung TV price results:" + price.get(i).getText());
         }
 
         Collections.sort(prices, Collections.reverseOrder());
