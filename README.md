@@ -16,8 +16,8 @@ _Note_ : All the above-mentioned libraries are open-source and does not include 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Capabilities**:
-This framework has the capability to run the tests in Docker
-Integration with Jenkins for scheduling is easy. 🙋
+1.This framework has the capability to run the tests in Docker(Installed Docker plugin for this maven project)
+2.Integration with Jenkins for scheduling is easy. 🙋
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
