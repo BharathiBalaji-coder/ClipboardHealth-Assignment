@@ -12,10 +12,10 @@ Amazon-Assignment
 6.Lombok - To reduce boilerplate codes
 7.Build Tool used:Apache Maven
 8.Test Design Pattern: Page Object Model
-Note : All the above-mentioned libraries are open-source and does not include any license.
+_Note_ : All the above-mentioned libraries are open-source and does not include any license.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Capabilities:
+**Capabilities**:
 This framework has the capability to run the tests in Docker
 Integration with Jenkins for scheduling is easy. 🙋
 
@@ -23,7 +23,7 @@ Integration with Jenkins for scheduling is easy. 🙋
 
 **Running Tests**
 
-Prerequisites: Java 8+
+**Prerequisites**: Java 8+
 1. mvn clean->validate->compile
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
