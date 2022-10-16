@@ -5,19 +5,29 @@ Amazon-Assignment
 
 **Libraries Used**: 
 
-Selenium - Web Automation
-TestNG - Unit Testing Library
-Extent Reports - Reporting Library to generate beautiful html reports
-Assert.assertEquals - TestNG Assertion Library in Java
-WebDriverManager - Executables management
-Lombok - To reduce boilerplate codes
-Build Tool used:Apache Maven
-Test Design Pattern: Page Object Model
+1.Selenium - Web Automation
+2.TestNG - Unit Testing Library
+3.Extent Reports - Reporting Library to generate beautiful html reports
+4.Assert.assertEquals - TestNG Assertion Library in Java
+5.WebDriverManager - Executables management
+6.Lombok - To reduce boilerplate codes
+7.Build Tool used:Apache Maven
+8.Test Design Pattern: Page Object Model
 Note : All the above-mentioned libraries are open-source and does not include any license.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Capabilities:
+This framework has the capability to run the tests in Docker
+Integration with Jenkins for scheduling is easy. 🙋
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Running Tests**
+
+Prerequisites: Java 8+
 1. mvn clean->validate->compile
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Allure Reports**:
 
@@ -36,6 +46,8 @@ Download allure from maven central and configure the path of allure in Environme
 **Website to download allure**: https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/
 
 1.Click on target/Results Directory and open the terminal 2.Enter the command allure serve 3.HTML Report will be generated.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Allure Report Interpretation**:
 
