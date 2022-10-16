@@ -10,6 +10,7 @@ import pages.LoginPage;
 import pages.ResultsPage;
 
 import java.io.IOException;
+
 import static utils.TestUtil.takeScreenshotAtEndOfTest;
 
 public class ResultsPageTest extends TestBase {
@@ -44,12 +45,13 @@ public class ResultsPageTest extends TestBase {
         resultsPage.validateResultsPageTitle();
         resultsPage.sortSamsungResultsPriceInDescendingOrder();
         resultsPage.clickSecondHighestPrice();
+        resultsPage.aboutThisItemValidation();
         takeScreenshotAtEndOfTest();
     }
 
     @Test(priority = 2)
     public void logOut() {
-      resultsPage.signOut();
+        resultsPage.signOut();
     }
 
     @AfterMethod
