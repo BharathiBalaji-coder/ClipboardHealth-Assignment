@@ -8,7 +8,7 @@ Amazon-Assignment
 Selenium - Web Automation
 TestNG - Unit Testing Library
 Extent Reports - Reporting Library to generate beautiful html reports
-AssertJ - Fluent Assertion Library in Java
+Assert.assertEquals - TestNG Assertion Library in Java
 WebDriverManager - Executables management
 Lombok - To reduce boilerplate codes
 Build Tool used:Apache Maven
