@@ -6,7 +6,7 @@ Amazon-Assignment
 
 1.Selenium - Web Automation
 2.TestNG - Unit Testing Library
-3.Extent Reports - Reporting Library to generate beautiful html reports
+3.Allure Reports - Reporting Library to generate beautiful html reports
 4.Assert.assertEquals - TestNG Assertion Library in Java
 5.WebDriverManager - Executables management
 6.Lombok - To reduce boilerplate codes
