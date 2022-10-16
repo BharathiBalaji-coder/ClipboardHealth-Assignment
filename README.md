@@ -10,9 +10,9 @@ Amazon-Assignment
 4.Assert.assertEquals - TestNG Assertion Library in Java
 5.WebDriverManager - Executables management
 6.Lombok - To reduce boilerplate codes
-7.Build Tool used:Apache Maven
+7.Build Tool :Apache Maven
 8.Test Design Pattern: Page Object Model
-_Note_ : All the above-mentioned libraries are open-source and does not include any license.
+Note: All the above-mentioned libraries are open-source and does not include any license.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Capabilities**:
@@ -34,8 +34,9 @@ This project has configured with allure-maven
 
 1.Add all the allure dependencies in pom.xml 
 2.Add the allure configuration in the runner class file 
-3.Specify the reports directory in the runner class file 4.Add config properties file
-4.Run the Test
+3.Specify the reports directory in the runner class file 
+4.Add config properties file
+5.Run the Test
 
 **Pre-Requisite**:
 
