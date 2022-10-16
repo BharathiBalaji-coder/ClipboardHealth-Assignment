@@ -50,7 +50,7 @@ public class ResultsPageTest extends TestBase {
     }
 
     @Test(priority = 2)
-    public void logOut() {
+    public void logOut() throws InterruptedException {
         resultsPage.signOut();
     }
 

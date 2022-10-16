@@ -4,6 +4,7 @@ import base.TestBase;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -33,7 +34,7 @@ public class ResultsPage extends TestBase {
     WebElement clickDropDown;
     @FindBy(xpath = "//a[@id='s-result-sort-select_2']")
     WebElement sortSamsungResults;
-    @FindBy(xpath = "//*[@id='feature-bullets']/h1")
+    @FindBy(xpath = "//h1[normalize-space()='About this item']")
     WebElement aboutThisItem;
 
     // Initializing the Page Objects:
@@ -87,16 +88,39 @@ public class ResultsPage extends TestBase {
         ArrayList<String> tabs2 = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs2.get(1));
         System.out.println("Page title of new tab: " + driver.getTitle());
-        //switch to parent window
-        driver.switchTo().window(tabs2.get(0));
-        System.out.println("Page title of parent window: " + driver.getTitle());
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,1000)");
+
+        Thread.sleep(7000);
+
+        Actions actions = new Actions(driver);
+
+        // Scroll Down using Actions class
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_DOWN).perform();
+
         Thread.sleep(7000);
         boolean value = aboutThisItem.isDisplayed();
         System.out.println(value);
+
+        String actLabel = aboutThisItem.getText().trim();
+        System.out.println(actLabel);
+        String expLabel = "About this item";
+        Assert.assertEquals(actLabel,expLabel);
+
+        //switch to parent window
+        driver.switchTo().window(tabs2.get(0));
+        System.out.println("Page title of parent window: " + driver.getTitle());
     }
 
-    public void signOut() {
+    public void signOut() throws InterruptedException {
+        Thread.sleep(7000);
         Actions actions1 = new Actions(driver);
         actions1.moveToElement(accountsAndListsMenu).build().perform();
         signOut.click();
