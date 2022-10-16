@@ -10,6 +10,10 @@ import org.testng.Assert;
 
 public class HomePage extends TestBase {
 
+    /**
+     * Page Factory-Object repository
+     */
+
     @FindBy(xpath = "//i[@class='hm-icon nav-sprite']")
     WebElement hamburgerMenu;
 
@@ -27,12 +31,18 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//span[@class='a-size-base a-color-base'][normalize-space()='Samsung']")
     WebElement Samsung;
 
-    // Initializing the Page Objects:
+    /**
+     * Initialize Page objects
+     */
+
     public HomePage() {
 
         PageFactory.initElements(driver, this);
 
     }
+    /**
+     * Action Methods
+     */
 
     public void clickOnHamburgerMenu() throws InterruptedException {
         hamburgerMenu.click();

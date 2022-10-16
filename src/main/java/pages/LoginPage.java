@@ -8,9 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class LoginPage extends TestBase {
-    //Page Factory - OR:
+    /**
+     * Page Factory-Object repository
+     */
     @FindBy(id = "ap_email")
-    WebElement emailid;
+    WebElement emailId;
 
     @FindBy(id = "continue")
     WebElement continueBtn;
@@ -26,7 +28,9 @@ public class LoginPage extends TestBase {
     @FindBy(xpath = "//div[@id='nav-flyout-ya-signin']//span[@class='nav-action-inner'][normalize-space()='Sign in']")
     WebElement signInBtn;
 
-    //Initializing the Page Objects:
+    /**
+     * Initialize Page objects
+     */
 
     public LoginPage() {
 
@@ -34,7 +38,9 @@ public class LoginPage extends TestBase {
 
     }
 
-    //Actions:
+    /**
+     * Action Methods
+     */
 
     public void clickOnAccountsMenu() {
         Actions action = new Actions(driver);
@@ -51,7 +57,7 @@ public class LoginPage extends TestBase {
     }
 
     public void login(String email, String pwd) {
-        emailid.sendKeys(email);
+        emailId.sendKeys(email);
         continueBtn.click();
         password.sendKeys(pwd);
         submitBtn.click();

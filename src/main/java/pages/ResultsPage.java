@@ -18,6 +18,10 @@ import java.util.List;
 
 public class ResultsPage extends TestBase {
 
+    /**
+     * Page Factory-Object repository
+     */
+
     @FindBy(xpath = "//span[text()='RESULTS']")
     WebElement resultsPage;
 
@@ -37,12 +41,23 @@ public class ResultsPage extends TestBase {
     @FindBy(xpath = "//h1[normalize-space()='About this item']")
     WebElement aboutThisItem;
 
-    // Initializing the Page Objects:
+    /**
+     * Initialize Page objects
+     */
+
     public ResultsPage() {
         PageFactory.initElements(driver, this);
 
     }
 
+    /**
+     * Action Methods
+     */
+    
+    /**
+     * Method to validate the page title in the Results Page
+     * @throws InterruptedException
+     */
     public void validateResultsPageTitle() throws InterruptedException {
         Thread.sleep(5000);
         String actualPageTitle = resultsPage.getText();
@@ -50,6 +65,10 @@ public class ResultsPage extends TestBase {
         Assert.assertEquals(expectedPageTitle, actualPageTitle);
     }
 
+    /**
+     * Method to sort the samsung TV results from High to Low
+     * @throws InterruptedException
+     */
     public void sortSamsungResultsPriceInDescendingOrder() throws InterruptedException {
         Thread.sleep(5000);
         WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -76,6 +95,9 @@ public class ResultsPage extends TestBase {
         System.out.println("Second highest price item :\n" + prices.get(1));
     }
 
+    /**
+     * Method to click on the Second-Highest price items after sorting the price from High to Low
+     */
     public void clickSecondHighestPrice() throws InterruptedException {
         Thread.sleep(4000);
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
@@ -83,6 +105,9 @@ public class ResultsPage extends TestBase {
         clickSecondHighestPrice.click();
     }
 
+    /**
+     * Method to validate the about this item label in the results page
+     */
     public void aboutThisItemValidation() throws InterruptedException {
         Thread.sleep(7000);
         ArrayList<String> tabs2 = new ArrayList<>(driver.getWindowHandles());
@@ -119,6 +144,10 @@ public class ResultsPage extends TestBase {
         System.out.println("Page title of parent window: " + driver.getTitle());
     }
 
+    /**
+     * Method to logout from the amazon application
+     * @throws InterruptedException
+     */
     public void signOut() throws InterruptedException {
         Thread.sleep(7000);
         Actions actions1 = new Actions(driver);

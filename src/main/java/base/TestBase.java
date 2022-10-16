@@ -19,6 +19,9 @@ public class TestBase {
     public static WebDriver driver;
     public static Properties prop;
 
+    /**
+     * Method to read config.properties
+     */
     public TestBase() {
         try {
             prop = new Properties();
@@ -31,6 +34,9 @@ public class TestBase {
         }
     }
 
+    /**
+     * Method to launch the Chrome browser
+     */
     public static void initialization() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
