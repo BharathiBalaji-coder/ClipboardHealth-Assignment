@@ -49,11 +49,9 @@ public class ResultsPage extends TestBase {
         PageFactory.initElements(driver, this);
 
     }
-    
+
     /**
      * Method to validate the page title in the Results Page
-     *
-     * @throws InterruptedException
      */
     public void validateResultsPageTitle() throws InterruptedException {
         Thread.sleep(5000);
@@ -64,8 +62,6 @@ public class ResultsPage extends TestBase {
 
     /**
      * Method to sort the samsung TV results from High to Low
-     *
-     * @throws InterruptedException
      */
     public void sortSamsungResultsPriceInDescendingOrder() throws InterruptedException {
         Thread.sleep(5000);
@@ -80,9 +76,9 @@ public class ResultsPage extends TestBase {
         System.out.println("Size of list = " + size);
 
         ArrayList<String> prices = new ArrayList<>();
-        for (int i = 0; i < size; i++) {
-            prices.add(price.get(i).getText());
-            System.out.println("samsung TV price results:" + (price.get(i).getText()));
+        for (WebElement priceValue : price) {
+            prices.add(priceValue.getText());
+            System.out.println("samsung TV price results:" + priceValue.getText());
 
         }
 
@@ -144,8 +140,6 @@ public class ResultsPage extends TestBase {
 
     /**
      * Method to logout from the amazon application
-     *
-     * @throws InterruptedException
      */
     public void signOut() throws InterruptedException {
         Thread.sleep(7000);
