@@ -49,13 +49,10 @@ public class ResultsPage extends TestBase {
         PageFactory.initElements(driver, this);
 
     }
-
-    /**
-     * Action Methods
-     */
     
     /**
      * Method to validate the page title in the Results Page
+     *
      * @throws InterruptedException
      */
     public void validateResultsPageTitle() throws InterruptedException {
@@ -67,6 +64,7 @@ public class ResultsPage extends TestBase {
 
     /**
      * Method to sort the samsung TV results from High to Low
+     *
      * @throws InterruptedException
      */
     public void sortSamsungResultsPriceInDescendingOrder() throws InterruptedException {
@@ -77,14 +75,14 @@ public class ResultsPage extends TestBase {
         sortSamsungResults.click();
         System.out.println("Price:High to Low is clicked successfully");
         Thread.sleep(5000);
-        List<WebElement> price = driver.findElements(By.xpath("//span[@class='a-price']"));
+        List<WebElement> price = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
         int size = price.size();
         System.out.println("Size of list = " + size);
 
         ArrayList<String> prices = new ArrayList<>();
         for (int i = 0; i < size; i++) {
-            prices.add((price.get(i).getText()));
-            System.out.println("samsung TV price results:" + price.get(i).getText());
+            prices.add(price.get(i).getText());
+            System.out.println("samsung TV price results:" + (price.get(i).getText()));
 
         }
 
@@ -137,7 +135,7 @@ public class ResultsPage extends TestBase {
         String actLabel = aboutThisItem.getText().trim();
         System.out.println(actLabel);
         String expLabel = "About this item";
-        Assert.assertEquals(actLabel,expLabel);
+        Assert.assertEquals(actLabel, expLabel);
 
         //switch to parent window
         driver.switchTo().window(tabs2.get(0));
@@ -146,6 +144,7 @@ public class ResultsPage extends TestBase {
 
     /**
      * Method to logout from the amazon application
+     *
      * @throws InterruptedException
      */
     public void signOut() throws InterruptedException {
