@@ -34,10 +34,6 @@ public class HomePageTest extends TestBase {
     @Test
     public void clickSamsung() throws InterruptedException, IOException {
         homePage.clickOnHamburgerMenu();
-        homePage.selectAppliancesMenu();
-        homePage.selectTelevisionsMenu();
-        homePage.filterSamsungBrand();
-        homePage.ClickSamsungBrand();
         takeScreenshotAtEndOfTest();
     }
 

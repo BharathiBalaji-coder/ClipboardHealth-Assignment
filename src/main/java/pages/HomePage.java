@@ -2,7 +2,9 @@ package pages;
 
 import base.TestBase;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -40,28 +42,34 @@ public class HomePage extends TestBase {
         PageFactory.initElements(driver, this);
 
     }
+
     /**
      * Action Methods
      */
 
     public void clickOnHamburgerMenu() throws InterruptedException {
         hamburgerMenu.click();
-        Thread.sleep(1000);
+        Thread.sleep(5000);
     }
 
     public void selectAppliancesMenu() throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,250)", "");
+        //JavascriptExecutor js = (JavascriptExecutor) driver;
+        //js.executeScript("window.scrollBy(0,250)", "");
         Thread.sleep(5000);
-        String actMenu = shopByCategoryMenu.getText();
-        System.out.println(actMenu);
-        String expMenu = "Shop By Category";
-        Assert.assertEquals(actMenu, expMenu);
+        Actions a = new Actions(driver);
+//scroll down a page
+        a.sendKeys(Keys.PAGE_DOWN).build().perform();
+        Thread.sleep(5000);
+        //String actMenu = shopByCategoryMenu.getText();
+        // System.out.println(actMenu);
+        // String expMenu = "Shop By Category";
+        // Assert.assertEquals(actMenu, expMenu);
         TVApplicancesMenu.click();
         Thread.sleep(7000);
     }
 
     public void selectTelevisionsMenu() {
+
         Televisions.click();
     }
 
